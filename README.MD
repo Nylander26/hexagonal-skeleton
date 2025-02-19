@@ -79,14 +79,22 @@ Después de ejecutar el script, la estructura de archivos será la siguiente:
  ┃ ┃ ┗ 📂 value-objects/
  ┃ ┣ 📂 infrastructure/
  ┃ ┃ ┣ 📂 controllers/
- ┃ ┃ ┣ 📂 repositories/
+ ┃ ┃ ┣ 📂 adapters/
+ ┃ ┃ ┃ ┣ 📂 external-services/
+ ┃ ┃ ┃ ┣ 📂 mappers/
+ ┃ ┃ ┃ ┣ 📂 persistence/
  ┃ ┃ ┣ 📂 middlewares/
  ┃ ┃ ┣ 📂 http/
  ┃ ┃ ┣ 📂 config/
- ┃ ┃ ┗ 📂 db/
+ ┃ ┃ ┃ ┣ 📂 httpClients/
  ┃ ┣ 📂 interfaces/
+ ┃ ┃ ┣ 📂 ports/
+ ┃ ┃ ┃ ┣ 📂 input/
+ ┃ ┃ ┃ ┣ 📂 output/
  ┃ ┣ 📂 shared/
- ┃ ┗ 📜 index.ts
+ ┃ ┃ ┣ 📂 utils/
+ ┃ ┗ 📜 app.ts
+ ┃ ┗ 📜 server.ts
  ┣ 📂 test/
  ┣ 📜 package.json
  ┣ 📜 tsconfig.json
@@ -121,7 +129,7 @@ dist/
 
 Una vez creada la estructura, puedes iniciar el servidor con:
 ```bash
-npx ts-node src/index.ts
+npx ts-node src/app.ts
 ```
 
 Esto iniciará un servidor en **http://localhost:3000** 🚀

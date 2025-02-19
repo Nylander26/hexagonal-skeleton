@@ -15,13 +15,20 @@ folders=(
     "src/domain/services"
     "src/domain/value-objects"
     "src/infrastructure/controllers"
-    "src/infrastructure/repositories"
+    "src/infrastructure/adapters"
+    "src/infrastructure/external-services"
+    "src/infrastructure/mappers"
+    "src/infrastructure/persistence"
     "src/infrastructure/middlewares"
     "src/infrastructure/http"
     "src/infrastructure/config"
-    "src/infrastructure/db"
+    "src/infrastructure/httpClients"
     "src/interfaces"
+    "src/interfaces/ports"
+    "src/interfaces/ports/input"
+    "src/interfaces/ports/output"
     "src/shared"
+    "src/shared/utils"
     "__test__"
 )
 
@@ -33,8 +40,22 @@ done
 echo 'import express from "express";
 const app = express();
 app.use(express.json());
-app.listen(3000, () => console.log("Server running on port 3000"));
-' > src/index.ts
+
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
+});
+
+export default app;
+' > src/server.ts
+
+echo 'import app from "./server";
+
+app.get("/", (req, res) => {
+    res.send("¡Hola, mundo!");
+});
+' > src/app.ts
 
 echo '{
   "compilerOptions": {
