@@ -26,21 +26,38 @@ El archivo `setup.sh` automatiza la configuración inicial del proyecto:
 
 ## 🚀 Pasos para ejecutar el script
 
-### 1️⃣ Clonar el repositorio (opcional)
-Si estás clonando desde un repositorio:
+### 1️⃣ Descargar el fichero zip (recomendado)
+* Ir a tu repositorio en GitHub. 
+* Hacer clic en "Code" → "Download ZIP". 
+* Extraer el ZIP y mover a la carpeta del proyecto. 
+* Seguir desde el paso 3 de la opción anterior (ejecutar setup.sh e inicializar Git). 
+
+### 2️⃣ Clonar el repositorio sin el historial de git (opcional)
+Si estás clonando desde un repositorio pero deseas cambiar el nombre del proyecto, puedes usar `degit` para clonar el proyecto sin el historial de Git:
 ```bash
-git clone <URL_DEL_REPO>
-cd <NOMBRE_DEL_REPO>
+npx degit nylander26/ddd-skeleton <NOMBRE_DEL_PROYECTO_A_CREAR>
+cd <NOMBRE_DEL_PROYECTO_A_CREAR>
 ```
 
-### 2️⃣ Dar permisos de ejecución al script
+### 3️⃣ Dar permisos de ejecución al script
 ```bash
 chmod +x setup.sh
 ```
+En caso de no tener permisos de super usuario usar `sudo`:
+```bash
+sudo chmod +x setup.sh
+```
 
-### 3️⃣ Ejecutar el script
+### 4️⃣ Ejecutar el script
 ```bash
 ./setup.sh
+```
+
+### 5️⃣ Inicializa un nuevo repositorio en Git en el proyecto
+```bash
+git init
+git add .
+git commit -m "Inicialización del proyecto"
 ```
 
 ---
