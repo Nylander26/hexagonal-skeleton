@@ -1,6 +1,6 @@
 # 🛠 Microservicio con Arquitectura Hexagonal
 
-Este proyecto proporciona un **script Bash (`setup.sh`)** que configura automáticamente un entorno de desarrollo para microservicios en **Node.js** con **TypeScript** y una estructura basada en **Arquitectura Hexagonal / DDD**.
+Este proyecto proporciona un **script Bash (`setup.sh`)** que configura automáticamente un entorno de desarrollo para microservicios en **Node.js** con **TypeScript** y una estructura basada en **Arquitectura Hexagonal**.
 
 ---
 
@@ -15,7 +15,7 @@ El archivo `setup.sh` automatiza la configuración inicial del proyecto:
    - `@types/node` → Tipos de Node.js
    - `ts-node` → Para ejecutar TypeScript sin compilar
    - `typescript` → Compilador de TypeScript
-3. **Crea una estructura de carpetas** siguiendo principios de **Arquitectura Hexagonal / DDD**.
+3. **Crea una estructura de carpetas** siguiendo principios de **Arquitectura Hexagonal**.
 4. **Genera archivos de configuración**, incluyendo:
    - `tsconfig.json` → Configuración de TypeScript
    - `src/index.ts` → Archivo de entrada con un servidor Express básico
@@ -35,7 +35,7 @@ El archivo `setup.sh` automatiza la configuración inicial del proyecto:
 ### 2️⃣ Clonar el repositorio sin el historial de git (opcional)
 Si estás clonando desde un repositorio pero deseas cambiar el nombre del proyecto, puedes usar `degit` para clonar el proyecto sin el historial de Git:
 ```bash
-npx degit nylander26/ddd-skeleton <NOMBRE_DEL_PROYECTO_A_CREAR>
+npx degit nylander26/hexagonal-skeleton <NOMBRE_DEL_PROYECTO_A_CREAR>
 cd <NOMBRE_DEL_PROYECTO_A_CREAR>
 ```
 
